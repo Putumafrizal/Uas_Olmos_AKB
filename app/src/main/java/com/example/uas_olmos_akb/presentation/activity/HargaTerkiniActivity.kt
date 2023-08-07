@@ -2,7 +2,6 @@ package com.example.uas_olmos_akb.presentation.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.moto.olmos.R
 import com.example.uas_olmos_akb.databinding.ActivityHargaTerkiniBinding
 
 class HargaTerkiniActivity : AppCompatActivity() {
