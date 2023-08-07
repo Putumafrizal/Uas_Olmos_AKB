@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.uas_olmos_akb.presentation.activity.SpesifikasiActivity">
+
+    <ImageView
+        android:id="@+id/ivNinja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ninja_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvNameMotor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/ivNinja"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="15dp"
+        android:text="2023 Kawasaki Ninja 650 Specifications"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsTable"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvNameMotor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <TextView
+                android:id="@+id/tvEngine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvNameMotor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/nsTable"
+                android:text="Engine"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="2"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvNameMotor">
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Engine type"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                        <TextView
+                            android:id="@+id/tvEngineType"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:background="@drawable/cell_shape_white">
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Displacement"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                        <TextView
+                            android:id="@+id/tvDisplacement"
+                            android:gravity="left"
+                            android:padding="3dip" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Power"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                        <TextView
+                            android:id="@+id/tvPower"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Torque"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                        <TextView
+                            android:id="@+id/tvTorque"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#D9D9D9">
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Bore x Stroke"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                        <TextView
+                            android:id="@+id/tvBore"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Compression Ratio"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                        <TextView
+                            android:id="@+id/tvCompression"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Ignition"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                        <TextView
+                            android:id="@+id/tvIgnition"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Fuel System"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white" />
+
+                        <TextView
+                            android:id="@+id/tvFuelSys"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                    </TableRow>
+
+                </TableLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tvDrivetrain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tvNameMotor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/nsTable"
+                android:text="Drivetrain"/>
+
+            <TableLayout
+                android:id="@+id/tlDrivetrain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="2"
+                android:layout_marginTop="10dp">
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Transmission"
+                        android:padding="3dip"
+                        android:background="@drawable/cell_shape_grey"/>
+                    <TextView
+                        android:id="@+id/tvTransmission"
+                        android:gravity="left"
+                        android:padding="3dip"
+                        android:background="@drawable/cell_shape_grey"/>
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_column="1"
+                        android:text="Final Drive"
+                        android:padding="3dip"
+                        android:background="@drawable/cell_shape_white"/>
+                    <TextView
+                        android:id="@+id/tvFinalDrive"
+                        android:gravity="left"
+                        android:padding="3dip"
+                        android:background="@drawable/cell_shape_white"/>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/tvChassis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tvNameMotor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/nsTable"
+                android:text="Chassis"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:id="@+id/tlChassis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="2"
+                    android:layout_marginTop="10dp">
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Suspension Front"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                        <TextView
+                            android:id="@+id/tvSusFront"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Suspension Rear"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                        <TextView
+                            android:id="@+id/tvSusRear"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Front Brakes"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                        <TextView
+                            android:id="@+id/tvFrontBrakes"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Rear Brakes"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                        <TextView
+                            android:id="@+id/tvRearBrakes"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Front Tires"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                        <TextView
+                            android:id="@+id/tvFrontTires"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Rear Tires"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                        <TextView
+                            android:id="@+id/tvRearTires"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Fuel Tank Capacity"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                        <TextView
+                            android:id="@+id/tvFuelCap"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                    </TableRow>
+
+
+                </TableLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tvDimensions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/tvNameMotor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/nsTable"
+                android:text="Dimensions"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:id="@+id/tlDimensions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="2"
+                    android:layout_marginTop="10dp">
+                    <TableRow
+                        android:background="#D9D9D9">
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Frame Type"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                        <TextView
+                            android:id="@+id/tvFrameType"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Rake/Trail"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                        <TextView
+                            android:id="@+id/tvRake"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Overall Length"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                        <TextView
+                            android:id="@+id/tvOvrLength"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Overall Width"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                        <TextView
+                            android:id="@+id/tvOvrWidth"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Overall Height"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                        <TextView
+                            android:id="@+id/tvOvrHeight"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Wheelbase"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                        <TextView
+                            android:id="@+id/tvWheelbase"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#D9D9D9">
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Ground Clearance"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                        <TextView
+                            android:id="@+id/tvGrClear"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Seat Height"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                        <TextView
+                            android:id="@+id/tvSeatHeight"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_white"/>
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView
+                            android:layout_column="1"
+                            android:text="Curb Weight"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                        <TextView
+                            android:id="@+id/tvCurbHeight"
+                            android:gravity="left"
+                            android:padding="3dip"
+                            android:background="@drawable/cell_shape_grey"/>
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnInfoDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:backgroundTint="@color/black"
+                android:text="Informasi Detail"
+                android:layout_marginTop="5dp"
+                android:textSize="10sp"
+                android:layout_gravity="center" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/black"
+                android:text="Back"
+                android:textSize="16sp"
+                app:cornerRadius="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

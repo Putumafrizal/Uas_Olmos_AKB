@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.uas_olmos_akb.presentation.activity.InfoDetailActivity">
+
+    <ImageView
+        android:id="@+id/ivNinja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ninja_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivNinja"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUpperDesc"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Kawasaki pertama kali meluncurkan kendaraan roda dua sehari-hari besutannya, sportbike berbobot medium Ninja 650 pada tahun 2006. Perusahaan sepeda motor asal Jepang ini telah merancanga Ninja 650 untuk menyajikan sensasi balap yang super cepat, dipadukan dengan karakternya sebagai kendaraan sehari-hari. Kawasaki telah membekali Ninja 650 dengan segala perangkat yang terbaik, baik dapur pacunya yang memiliki putaran cepat, putaran empat-tak, pendingin cairan, mesin 649cc ganda parallel, ataupun ergonomis yang menakjubkan serta gaya desainnya futuristik dan dinamis. Dengan bentuk bodi yang secara garis besar mirip dengan supersport, lebih ramping. Ninja satu ini tentunya akan menarik perhatian sebagian besar orang di jalanan, baik ketika anda bepergian ke kantor, berlaga di trek balap, ataupun hanya melakukan perjalanan jarak pendek. Ninja 650 juga dibekali dengan sistem ABS sebagai fitur opsional di Indonesia."
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Pendahuluan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Sejak peluncuran Ninja 650 ikonik, Kawasaki telah menuai kesuksesan yang tak tertandingi dan memonopoli pasar motor sportbike berbobot medium. Sejak debut kembali pada tahun 2006, Ninja 650 sportbike multi-talenta ini telah menjadi produk terpercaya di grup elit ini, memenangkan berbagai penghargaan baik dari pemilik ataupun media. Di Indonesia, Kawasaki telah memperkenalkan model sportbike berbobot medium ini dalam dua varian - Ninja 650 dan Ninja 650 ABS. Pada versi terbaru dari Ninja 650, pabrikan asal Jepang ini mampu mengungguli semua kompetitornya dengan cara meningkatkan kualitas dan menyematkan lebih banyak fitur pada produk bermesin ganda paralel ini. Motor ini dapat dijadikan sebagai batu loncatan terbaik untuk pengendara amatir yang ingin memuaskan gariah balap mereka, dimana motor ini memiliki perpaduan sempurna dari semua aspek yang diharapkan - kinerja mumpuni, pengendalian dan harga terjangkau." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/black"
+                android:text="Back"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="16sp"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
